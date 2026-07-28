@@ -1,0 +1,8 @@
+# Copy this file and pass it with: capcut-subtitles --config config.toml video.mp4
+language = "ru"
+model = "small"
+models_dir = "~/whisper-models"
+max_words = 4
+max_visual_width = 18
+backup = true
+

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capcut-subtitles"
+version = "0.1.0"
+description = "Generate neatly formatted SRT subtitles for CapCut Desktop using whisper.cpp"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "devriez"}]
+keywords = ["capcut", "subtitles", "srt", "whisper", "whisper-cpp"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = ["tomli>=2.0; python_version < '3.11'"]
+
+[project.scripts]
+capcut-subtitles = "capcut_subtitles.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/devriez/subtitles-generator"
+Repository = "https://github.com/devriez/subtitles-generator"
+Issues = "https://github.com/devriez/subtitles-generator/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

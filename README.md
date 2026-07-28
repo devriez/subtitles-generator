@@ -53,7 +53,7 @@ python3 -m pip install -e .
 ## Использование
 
 ```bash
-capcut-subtitles my_video.mp4
+subtitles my_video.mp4
 ```
 
 Результатом будут файлы рядом с видео:
@@ -66,19 +66,19 @@ my_video.original.srt
 Можно передать несколько файлов:
 
 ```bash
-capcut-subtitles first.mp4 second.mp4
+subtitles first.mp4 second.mp4
 ```
 
 Или использовать shell-маску:
 
 ```bash
-capcut-subtitles *.mp4
+subtitles *.mp4
 ```
 
 По умолчанию программа ищет модель по пути `~/whisper-models/ggml-small.bin`. Другой путь можно передать явно:
 
 ```bash
-capcut-subtitles my_video.mp4 --model-path ~/Downloads/ggml-medium.bin
+subtitles my_video.mp4 --model-path ~/Downloads/ggml-medium.bin
 ```
 
 ## Настройка
@@ -86,7 +86,7 @@ capcut-subtitles my_video.mp4 --model-path ~/Downloads/ggml-medium.bin
 Все частые настройки доступны как параметры:
 
 ```bash
-capcut-subtitles my_video.mp4 \
+subtitles my_video.mp4 \
   --language ru \
   --max-words 4 \
   --max-visual-width 18
@@ -95,7 +95,7 @@ capcut-subtitles my_video.mp4 \
 Либо скопируйте [`examples/config.toml`](examples/config.toml) и передайте его:
 
 ```bash
-capcut-subtitles --config config.toml my_video.mp4
+subtitles --config config.toml my_video.mp4
 ```
 
 Параметры командной строки имеют приоритет над конфигом. Чтобы не создавать резервную копию, добавьте `--no-backup`.
